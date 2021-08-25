@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-  jQuery('#masthead').scrollToFixed();
+  jQuery('.top-bar').scrollToFixed();
 });
 
 jQuery( document ).ready( function( $ ) {
@@ -22,3 +22,9 @@ jQuery( document ).ready( function( $ ) {
         $(this).parent().parent().find(".full-list").children('li:gt(4)').show();
     } );
 } );
+
+jQuery(document).ready(function($) {
+    $('.popup-video-outer .gb-container-link').magnificPopup({
+        type: 'iframe'
+    });
+});

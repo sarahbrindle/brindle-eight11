@@ -78,7 +78,12 @@ query_posts(array('post_type' => 'neighborhood','post_status' => 'publish',
       while (have_posts()) : the_post();
          //$return_string = '<a href="'.get_permalink().'">'.get_the_title().'</a>';
         $content = apply_filters( 'the_content', get_the_content() );
-         $return_string = $return_string.'<div class="tab-grid" href="#"><a target="_blank" href="'.get_field('location_link').'">';
+        $googleMapLink = get_field('address');
+        $googleMapLink = 'https://maps.google.com/?q='.$googleMapLink;
+        if(get_field('custom_url')){
+            $googleMapLink = get_field('custom_url');
+        }
+         $return_string = $return_string.'<div class="tab-grid" href="#"><a target="_blank"  href="'.$googleMapLink.'">';
          $return_string = $return_string.'<h4>'.get_the_title().'</h4>'.$content.'
                 </a></div>';
       endwhile;
