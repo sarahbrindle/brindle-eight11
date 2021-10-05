@@ -5,8 +5,6 @@ function brindle_enqueue_styles() {
       wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' ); 
       wp_enqueue_style( 'easy-responsive-tabs', get_stylesheet_directory_uri() . '/assets/css/easy-responsive-tabs.css' ); 
       wp_enqueue_style( 'magnific-popup', get_stylesheet_directory_uri() . '/assets/plugins/magnific-popup/magnific-popup.css' );
-
-
 } 
 
 function brindle_enqueue_scripts() {
@@ -24,21 +22,6 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style( 'dashicons' );
 
 } );
-
-
-/*
-function my_scripts_method() {
-   // register your script location, dependencies and version
-   wp_register_script('custom_script',
-       get_stylesheet_directory_uri() . '/assets/js/all.min.js',
-       array('jquery'),
-       '1.0',
-       true);
-   // enqueue the script
-   wp_enqueue_script('custom_script');
-}
-add_action('wp_enqueue_scripts', 'my_scripts_method');
-*/
 
 
 add_theme_support('editor-styles');
@@ -75,11 +58,15 @@ add_action( 'init', 'register_shortcodes');
 include_once(get_stylesheet_directory().'/cpt/neighborhood.php');
 
 
-
-
-
 function year_shortcode () {
 $year = date_i18n ('Y');
 return $year;
 }
 add_shortcode ('year', 'year_shortcode');
+
+add_filter( 'generate_typography_default_fonts', function( $fonts ) {
+    $fonts[] = 'Gotham';
+    $fonts[] = 'Osgard Pro';
+
+    return $fonts;
+} );

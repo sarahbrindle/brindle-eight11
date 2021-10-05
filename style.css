@@ -8,7 +8,7 @@ GitHub Theme URI: https://github.com/sarahbrindle/brindle-eight11
 GitHub Branch:    master
 Version: v1.0.1
 Template:		 generatepress
-Date:            25-08-2021
+Date:            05-10-2021
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -24,6 +24,32 @@ Text Domain:	 brindle-eight11
 /* ==========================================================================
    General
    ========================================================================== */
+/*Fonts*/
+   @font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Light.eot');
+    src: url('assets/fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Gotham-Light.woff2') format('woff2'),
+        url('assets/fonts/Gotham-Light.woff') format('woff'),
+        url('assets/fonts/Gotham-Light.ttf') format('truetype'),
+        url('assets/fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Osgard Pro';
+    src: url('assets/fonts/OsgardPro.eot');
+    src: url('assets/fonts/OsgardPro.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/OsgardPro.woff2') format('woff2'),
+        url('assets/fonts/OsgardPro.woff') format('woff'),
+        url('assets/fonts/OsgardPro.ttf') format('truetype'),
+        url('assets/fonts/OsgardPro.svg#OsgardPro') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 h2, h3 {
 	letter-spacing:.04em;
 }
@@ -296,20 +322,34 @@ ul.resp-tabs-list li {
 
 }
 
+.amenities-img .wp-block-image{
+	width: 100%;
+	max-width: 480px;
+	overflow: hidden;
+		height: 720px;
+}
+
+.amenities-img .wp-block-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */	
 
 .footer-widgets .widget {
     margin-bottom: 20px;
-	font-family: "Libre Baskerville", serif;
+/*	font-family: "Libre Baskerville", serif;
 font-weight: 200;
-	font-style: italic;
+	font-style: italic;*/
 }
-
+/*
 .footer-widgets .widget h6{
 	font-style: normal;
-}
+}*/
 .footer-widget-3 .menu-footer-menu-container ul{display: flex;
 flex-wrap: wrap;
 margin-left: -20px;
@@ -317,7 +357,7 @@ margin-right: -20px;}
 .footer-widget-3 .menu-footer-menu-container ul li{
 	padding-left: 20px;
 	padding-right: 20px;
-	font-weight: 700;
+	/*font-weight: 700;*/
 }
 
 .footer-bar {
@@ -386,7 +426,9 @@ margin-right: -20px;}
     height: 400px;
 
 	}
-
+	.amenities-img .wp-block-image {
+		height:620px; 
+	}
 }
 
 @media (max-width: 1024.98px) { 
@@ -445,6 +487,13 @@ margin-right: -20px;}
 		padding-left: 10px!important;
 		padding-right: 10px!important;
 	}
+	.amenities-img .wp-block-image {
+    height: auto;
+}.amenities-img .wp-block-image img {
+    object-fit: cover;
+    width: auto;
+    height: auto;
+}
 }
 
  /*Small devices (landscape phones, less than 768px)*/
