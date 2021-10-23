@@ -8,7 +8,7 @@ GitHub Theme URI: https://github.com/sarahbrindle/brindle-eight11
 GitHub Branch:    master
 Version: v1.0.2
 Template:		 generatepress
-Date:            05-10-2021
+Date:            23-10-2021
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -137,13 +137,13 @@ margin-left: 160px;
 }
 .main-navigation .main-nav ul li.nav-btn a {
 	padding: 12px 35px;
-	background-color:#55766e;
-	color: #fff;
+	/*background-color:#55766e;
+	color: #fff;*/
 }
 
 .main-navigation .main-nav ul li.nav-btn a:hover{
-	color: #fff;
-		background-color:#003B47;
+	/*color: #fff;
+	background-color:#003B47;*/
 
 }
 
@@ -274,7 +274,7 @@ ul.nh-list li {list-style: none;}
 ul.nh-list li svg {
 	margin-right: 10px;
 }
-
+/*
 .floorplangrid .filters a {
 	background-color: #003b47!important;
 	color: #fff;
@@ -282,26 +282,28 @@ ul.nh-list li svg {
 .floorplangrid .filters a.active {
 background-color: #55766e!important;
 	color: #fff;}
+.floorplangrid a.button {
+	background-color: #55766e!important;
+
+}
+*/
 
 .floorplan-inner{
 	background-color: #fff;
 	text-align: center;
 }
-.floorplangrid a.button {
-	background-color: #55766e!important;
 
-}
 
 .vp-filter__item a{
-	background-color: #55766e!important;
+	/*background-color: #55766e!important;*/
 	border-radius: 0px !important;
-	color: #fff!important;
+	/*color: #fff!important;*/
 }
-.vp-filter__item.vp-filter__item-active a{
+/*.vp-filter__item.vp-filter__item-active a{
 		background-color: #003b47!important;
 		color: #fff!important;
 
-}
+}*/
 
 .banner-section .wp-block-cover .wp-block-cover__inner-container {
     max-width: 1024px;
@@ -322,6 +324,7 @@ ul.resp-tabs-list li {
 	margin-left: 5px;
 	margin-right: 5px;
 }
+/*
 .resp-tab-item {
 	background-color: #55766e;
 	color: #fff;
@@ -331,6 +334,7 @@ ul.resp-tabs-list li {
 		color: #fff;
 
 }
+*/
 
 .amenities-img .wp-block-image{
 	width: 100%;

@@ -70,3 +70,5 @@ add_filter( 'generate_typography_default_fonts', function( $fonts ) {
 
     return $fonts;
 } );
+
+require_once get_stylesheet_directory() . '/inc/css-output-child.php';
