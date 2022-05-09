@@ -6,9 +6,9 @@ Author: Brindle Eight11
 Author URI: https://www.brindledigital.com/
 GitHub Theme URI: https://github.com/sarahbrindle/brindle-eight11
 GitHub Branch:    master
-Version: v1.0.2
+Version: v1.0.3
 Template:		 generatepress
-Date:            23-10-2021
+Date:            09-05-2022
 Requires at least: 5.0
 Tested up to: 5.7
 Requires PHP: 7.0
@@ -202,6 +202,11 @@ transition: all .6s ease-in-out;
 }
 
 .flip-container:hover .gb-grid-column:last-child{
+	opacity: 1;
+}
+
+
+.gb-container-link:hover + .gb-inside-container .flip-container .gb-grid-column:last-child{
 	opacity: 1;
 }
 
