@@ -65,7 +65,47 @@
 			$css->add_property( 'background-color', $generate_settings['form_button_background_color_hover'].'!important' );
 			$css->add_property( 'color', $generate_settings['form_button_text_color_hover'].'!important' );
 
+			/*Neighborhood with map Tab*/
 
+			$css->set_selector( 'body .map-a__cat-item,body .map-a__cat-link-column' );
+			$css->add_property( 'color', $generate_settings['form_button_background_color'].'!important' );
+
+			$css->set_selector( '.map-a__cat-selected' );
+			$css->add_property( 'color', $generate_settings['form_button_text_color'].'!important' );
+
+			
+
+			$css->set_selector( 'body .neighborhood-b__poi,body .map-a__cat-link[data-selected="true"],body .map-a__cat-selected' );
+			$css->add_property( 'background-color', $generate_settings['form_button_background_color'].'!important' );
+			$css->add_property( 'color', $generate_settings['form_button_text_color'].'!important' );
+
+
+
+			$css->set_selector( 'body .map-a__cat-item' );
+			$css->add_property( 'background-color', $generate_settings['form_button_background_color_hover'].'!important' );
+			$css->set_selector( 'body .tab-grid h4,body .tab-grid p' );
+			$css->add_property( 'color', $generate_settings['form_button_background_color_hover'].'!important' );
+
+			
+
+			$css->set_selector( 'body .map__infobox-poi-address-header' );
+			$css->add_property( 'color', $generate_settings['form_button_background_color'].'!important' );
+
+			
+			
+
+			$css->set_selector( 'body .neighborhood-b__poi-category-list-item' );
+			$css->add_property( 'border-color', $generate_settings['h4_color'].'!important' );
+
+			$css->set_selector( 'body .neighborhood-b__poi-category-item-title,body .neighborhood-b__poi-category-item-title' );
+			$css->add_property( 'color', $generate_settings['top_bar_text_color'].'!important' );
+
+			$css->set_selector( 'body .map-a__cat-link[data-selected="true"] .map-a__cat-link-column,body .map-a__cat-link:hover:not(.map-a__cat-link--active)' );
+			$css->add_property( 'color', $generate_settings['form_button_text_color'].'!important' );
+
+			$css->set_selector( ' body .map-a__cat-link::before' );
+			$css->add_property( 'background', $generate_settings['form_button_background_color'].'!important' );
+			
 			//do_action( 'generate_base_css', $css );
 
 			return apply_filters( 'wtp_base_css_output', $css->css_output() );
